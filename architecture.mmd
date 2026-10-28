@@ -1,0 +1,11 @@
+flowchart LR
+ U[Streamlit UI] --> L[Document Loader]
+ L --> E[PDF/DOCX Text Extractor]
+ E --> A[Passage Alignment]
+ A --> X[Exact Diff]
+ X --> S[Semantic Analysis]
+ S --> C[Classifier & Prioritizer]
+ C --> D[(SQLite)]
+ D --> R[Review Workflow]
+ D --> G[CSV/PDF Reports]
+ C --> F[Rule-based AI Summary]
